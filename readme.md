@@ -1,11 +1,18 @@
 # rpkeebs RPWK87
 
+- [More information on Printables](https://www.printables.com/model/1612022-rpkeebs-wk78-another-janky-keyboard-project-based)
+- [Brutalist housing 5 degree incline](https://www.tinkercad.com/things/j2OqCod8cQN-rpwk87-brutalist-housing-5-deg-incline)
+- [Brutalist housing 3.5 degree incline](https://www.tinkercad.com/things/h4vcry9e0PI-rpwk87-brutalist-housing-35-deg-incline)
+
+## Getting started
+
+- Ensure you have qmk properly installed and for convenience also install QMK Toolbox
 - Clone repo https://github.com/vial-kb/vial-qmk first
 - Then clone this repo in the keyboards folder;
 
 ```shell
 git clone https://github.com/vial-kb/vial-qmk.git MyKBDProject
-git clone https://github.com/rmpel/qmk-vial-keyboard-wk87.git /keyboards/rpkeebs/rpwk87
+git clone https://github.com/rmpel/qmk-vial-keyboard-wk87.git MyKBDProject/keyboards/rpkeebs/rpwk87
 ```
 
 ## This is for an existing PCB;
