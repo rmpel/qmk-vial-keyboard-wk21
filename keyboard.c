@@ -354,7 +354,7 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
 
     /* Caps Lock indicator (LED 111) - 20% brightness (51/255) */
     if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0, 0);  // Red at configured brightness
+        rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, WK87_MODE_STATUS_BRIGHTNESS_LEVEL, 0, 0);  // Red at configured brightness
     } else {
         rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, 0, 0, 0);    // Off
     }

@@ -127,8 +127,8 @@
     Without this, status led 1 is caps lock (red = on), led 2 is layer (off = default layer, blue = layer 1, green = layer 2, yellow = layer 3). Colors conficured in keyboard.c.
     With this, status led 1 indidates layer 0 (Mac mode), white for selection, blue for FN (the-layer+1) and led 2 is caps lock (red = on). For windows, it's the opposite; led 1 is the caps lock indicator and led 2 is the layer indicator.
  */
-#define WK87_STATUS_VARIANT
+// #define WK87_STATUS_VARIANT
 /* Brightness level for status LEDs (0-255), this controls a single color channel to combine into the colors stated above, is used for layer status */
 #define WK87_LAYER_STATUS_BRIGHTNESS_LEVEL 80
 /* Brightness level for status LEDs (0-255), this controls all three channels for the Mac/Win indication */
-#define WK87_MODE_STATUS_BRIGHTNESS_LEVEL 16
+#define WK87_MODE_STATUS_BRIGHTNESS_LEVEL 80
