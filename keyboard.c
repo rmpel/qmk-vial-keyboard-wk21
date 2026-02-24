@@ -304,6 +304,43 @@ led_config_t g_led_config = {
     }
 };
 
+/* ===========================================================================
+ * LED FADE STATE TRACKING
+ * ===========================================================================
+ * Track layer change timing for fade effect:
+ * - 0-5 seconds: full brightness
+ * - 5-10 seconds: fade from full to 0
+ * - >10 seconds: stay off until layer change
+ */
+
+static uint32_t layer_change_timer = 0;
+
+/* Reset timer when layer changes */
+layer_state_t layer_state_set_kb(layer_state_t state) {
+    layer_change_timer = timer_read32();
+    return layer_state_set_user(state);
+}
+
+/* Calculate fade brightness based on elapsed time
+ * Returns brightness value 0-255
+ * time_ms: elapsed time since layer change in milliseconds
+ * max_brightness: maximum brightness value (0-255)
+ */
+static uint8_t calculate_fade_brightness(uint32_t time_ms, uint8_t max_brightness) {
+    if (time_ms < WK87_MODE_STATUS_DURATION) {
+        // 0-5 seconds: full brightness
+        return max_brightness;
+    } else if (time_ms < WK87_MODE_STATUS_DURATION + WK87_MODE_STATUS_FADE_DURATION) {
+        // 5-10 seconds: fade from max to 0
+        uint32_t fade_time = time_ms - WK87_MODE_STATUS_DURATION;  // 0-5000ms
+        uint32_t brightness = max_brightness * (WK87_MODE_STATUS_FADE_DURATION - fade_time) / WK87_MODE_STATUS_FADE_DURATION;
+        return (uint8_t)brightness;
+    } else {
+        // >10 seconds: off
+        return 0;
+    }
+}
+
 #ifdef WK87_STATUS_VARIANT
 
 /* Custom RGB Matrix indicator control */
@@ -320,24 +357,29 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
         caps_led = RGB_MATRIX_CAPS_LOCK_INDEX;
     }
 
-    // Layer led goes white 5% on base layer (0 or 2), blue 20% o base layer 1 (1 or 3).
+    // Layer led goes white with fade on base layer (0 or 2), blue no fade on base layer 1 (1 or 3).
     // Caps lock led goes red 20% when caps lock is on, off otherwise.
 
-    /* Caps Lock indicator (LED 111) - 20% brightness (51/255) */
+    /* Caps Lock indicator - unchanged */
     if (host_keyboard_led_state().caps_lock) {
         rgb_matrix_set_color(caps_led, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0, 0);  // Red at configured brightness
     } else {
         rgb_matrix_set_color(caps_led, 0, 0, 0);    // Off
     }
 
-    /* Layer indicator (LED 112) - 20% brightness (51/255) */
+    /* Layer indicator with fade effect for layers 0 and 2 only */
+    uint32_t elapsed = timer_elapsed32(layer_change_timer);
+    uint8_t fade_brightness;
 
     switch(layer & 0x01) {
         case 0:
-            rgb_matrix_set_color(layer_led, WK87_MODE_STATUS_BRIGHTNESS_LEVEL, WK87_MODE_STATUS_BRIGHTNESS_LEVEL, WK87_MODE_STATUS_BRIGHTNESS_LEVEL);  // Blue at configured brightness
+            // Layer 0/2: White with fade
+            fade_brightness = calculate_fade_brightness(elapsed, WK87_MODE_STATUS_BRIGHTNESS_LEVEL);
+            rgb_matrix_set_color(layer_led, fade_brightness, fade_brightness, fade_brightness);
             break;
         case 1:
-            rgb_matrix_set_color(layer_led, 0, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL);  // Blue at configured brightness
+            // Layer 1/3: Blue, no fade
+            rgb_matrix_set_color(layer_led, 0, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL);
             break;
     }
 
@@ -352,27 +394,36 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
         return false;
     }
 
-    /* Caps Lock indicator (LED 111) - 20% brightness (51/255) */
+    /* Caps Lock indicator - unchanged */
     if (host_keyboard_led_state().caps_lock) {
         rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, WK87_MODE_STATUS_BRIGHTNESS_LEVEL, 0, 0);  // Red at configured brightness
     } else {
         rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, 0, 0, 0);    // Off
     }
 
-    /* Layer indicator (LED 112) - 20% brightness (51/255) */
+    /* Layer indicator with fade effect for layers 0 and 2 */
     uint8_t layer = get_highest_layer(layer_state);
+    uint32_t elapsed = timer_elapsed32(layer_change_timer);
+    uint8_t fade_brightness;
+
     switch(layer) {
         case 0:
-            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, 0, 0);  // Blue at configured brightness
+            // Layer 0: White with fade
+            fade_brightness = calculate_fade_brightness(elapsed, WK87_MODE_STATUS_BRIGHTNESS_LEVEL);
+            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, fade_brightness, fade_brightness, fade_brightness);
             break;
         case 1:
-            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL);  // Blue at configured brightness
+            // Layer 1: Blue (no fade)
+            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL);
             break;
         case 2:
-            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0);  // Green at configured brightness
+            // Layer 2: Green with fade
+            fade_brightness = calculate_fade_brightness(elapsed, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL);
+            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, fade_brightness, 0);
             break;
         case 3:
-            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0);  // Yellow at configured brightness
+            // Layer 3: Yellow (no fade)
+            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0);
             break;
     }
 

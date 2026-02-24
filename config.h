@@ -132,3 +132,5 @@
 #define WK87_LAYER_STATUS_BRIGHTNESS_LEVEL 80
 /* Brightness level for status LEDs (0-255), this controls all three channels for the Mac/Win indication */
 #define WK87_MODE_STATUS_BRIGHTNESS_LEVEL 80
+#define WK87_MODE_STATUS_DURATION 5000
+#define WK87_MODE_STATUS_FADE_DURATION 2000
