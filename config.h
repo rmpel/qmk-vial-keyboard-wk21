@@ -88,8 +88,6 @@
 
 /* RGB Matrix Limits */
 #define RGB_MATRIX_LED_COUNT 113  // 87 per-key + 24 underglow + 2 status LEDs
-#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
-#define RGB_MATRIX_DEFAULT_VAL 150
 
 /* Status LEDs (face upward) */
 #define RGB_MATRIX_CAPS_LOCK_INDEX 111   // LED for Caps Lock indicator
