@@ -312,41 +312,6 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
         return false;
     }
 
-    /* Caps Lock indicator (LED 111) - 20% brightness (51/255) */
-    if (host_keyboard_led_state().caps_lock) {
-        rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0, 0);  // Red at configured brightness
-    } else {
-        rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, 0, 0, 0);    // Off
-    }
-
-    /* Layer indicator (LED 112) - 20% brightness (51/255) */
-    uint8_t layer = get_highest_layer(layer_state);
-    switch(layer) {
-        case 0:
-            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, 0, 0);  // Blue at configured brightness
-            break;
-        case 1:
-            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL);  // Blue at configured brightness
-            break;
-        case 2:
-            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0);  // Green at configured brightness
-            break;
-        case 3:
-            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0);  // Yellow at configured brightness
-            break;
-    }
-
-    return true;
-}
-
-#else
-
-/* Custom RGB Matrix indicator control */
-bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
-    if (!rgb_matrix_indicators_advanced_user(led_min, led_max)) {
-        return false;
-    }
-
     uint8_t layer_led = RGB_MATRIX_CAPS_LOCK_INDEX;
     uint8_t caps_led = RGB_MATRIX_LAYER_INDEX;
     uint8_t layer = get_highest_layer(layer_state);
@@ -373,6 +338,41 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
             break;
         case 1:
             rgb_matrix_set_color(layer_led, 0, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL);  // Blue at configured brightness
+            break;
+    }
+
+    return true;
+}
+
+#else
+
+/* Custom RGB Matrix indicator control */
+bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
+    if (!rgb_matrix_indicators_advanced_user(led_min, led_max)) {
+        return false;
+    }
+
+    /* Caps Lock indicator (LED 111) - 20% brightness (51/255) */
+    if (host_keyboard_led_state().caps_lock) {
+        rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0, 0);  // Red at configured brightness
+    } else {
+        rgb_matrix_set_color(RGB_MATRIX_CAPS_LOCK_INDEX, 0, 0, 0);    // Off
+    }
+
+    /* Layer indicator (LED 112) - 20% brightness (51/255) */
+    uint8_t layer = get_highest_layer(layer_state);
+    switch(layer) {
+        case 0:
+            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, 0, 0);  // Blue at configured brightness
+            break;
+        case 1:
+            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL);  // Blue at configured brightness
+            break;
+        case 2:
+            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, 0, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0);  // Green at configured brightness
+            break;
+        case 3:
+            rgb_matrix_set_color(RGB_MATRIX_LAYER_INDEX, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, WK87_LAYER_STATUS_BRIGHTNESS_LEVEL, 0);  // Yellow at configured brightness
             break;
     }
 
