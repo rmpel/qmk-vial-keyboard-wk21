@@ -94,6 +94,8 @@
 /* Status LEDs (face upward) */
 #define RGB_MATRIX_CAPS_LOCK_INDEX 111   // LED for Caps Lock indicator
 #define RGB_MATRIX_LAYER_INDEX 112        // LED for Layer indicator
+// Disable underglow by splitting them off from the main.
+// #define RGB_MATRIX_SPLIT { 87, 26 }
 
 /*
  * ===========================================================================
