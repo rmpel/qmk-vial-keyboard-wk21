@@ -97,6 +97,9 @@
 // Disable underglow by splitting them off from the main.
 // #define RGB_MATRIX_SPLIT { 87, 26 }
 
+/* Scanning delay in microseconds to prevent aliasing */
+#define WK87_SCAN_DELAY 2
+
 /*
  * ===========================================================================
  * VIAL CONFIGURATION

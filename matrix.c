@@ -108,7 +108,7 @@ static inline matrix_row_t read_row(uint8_t row) {
     shift_writePin(row_pins[row], 0);
 
     /* Brief delay before next row */
-    wait_us(5);
+    wait_us(WK87_SCAN_DELAY);
 
     return row_value;
 }
