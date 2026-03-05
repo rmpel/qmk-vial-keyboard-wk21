@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="352.7mm" height="128.3mm" viewBox="0 0 352.7 128.3"
+     xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+  <title>RPWK87 Underglow LED Layout - Top View (Actual Scale)</title>
+
+  <defs>
+    <!-- Grid pattern based on coordinate system -->
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#e0e0e0" stroke-width="0.2"/>
+    </pattern>
+    <!-- Major grid every 50 coordinate units -->
+    <pattern id="majorGrid" width="69.11" height="69.11" patternUnits="userSpaceOnUse">
+      <rect width="69.11" height="69.11" fill="url(#grid)"/>
+      <path d="M 69.11 0 L 0 0 0 69.11" fill="none" stroke="#b0b0b0" stroke-width="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="352.7" height="128.3" fill="#f5f5f5"/>
+
+  <!-- Grid overlay -->
+  <rect width="352.7" height="128.3" fill="url(#majorGrid)" opacity="0.5"/>
+
+  <!-- Firmware coordinate grid (every 8 firmware units) -->
+  <!-- TOP VIEW: Origin (0,0) at top-LEFT, X increases RIGHT, Y increases DOWN -->
+  <g id="firmware-grid" stroke="#888888" stroke-width="0.3" opacity="0.4">
+    <!-- Vertical grid lines (constant X_fw) -->
+    <line x1="13.05" y1="18.95" x2="13.05" y2="118.60" stroke="#333333" stroke-width="0.6" opacity="1.0"/> <!-- X_fw=0 (Y-axis) -->
+    <line x1="24.77" y1="18.95" x2="24.77" y2="118.60"/> <!-- X_fw=8 -->
+    <line x1="36.50" y1="18.95" x2="36.50" y2="118.60"/> <!-- X_fw=16 -->
+    <line x1="48.22" y1="18.95" x2="48.22" y2="118.60"/> <!-- X_fw=24 -->
+    <line x1="59.94" y1="18.95" x2="59.94" y2="118.60"/> <!-- X_fw=32 -->
+    <line x1="71.67" y1="18.95" x2="71.67" y2="118.60"/> <!-- X_fw=40 -->
+    <line x1="83.39" y1="18.95" x2="83.39" y2="118.60"/> <!-- X_fw=48 -->
+    <line x1="95.11" y1="18.95" x2="95.11" y2="118.60"/> <!-- X_fw=56 -->
+    <line x1="106.84" y1="18.95" x2="106.84" y2="118.60"/> <!-- X_fw=64 -->
+    <line x1="118.56" y1="18.95" x2="118.56" y2="118.60"/> <!-- X_fw=72 -->
+    <line x1="130.28" y1="18.95" x2="130.28" y2="118.60"/> <!-- X_fw=80 -->
+    <line x1="142.01" y1="18.95" x2="142.01" y2="118.60"/> <!-- X_fw=88 -->
+    <line x1="153.73" y1="18.95" x2="153.73" y2="118.60"/> <!-- X_fw=96 -->
+    <line x1="165.45" y1="18.95" x2="165.45" y2="118.60"/> <!-- X_fw=104 -->
+    <line x1="177.17" y1="18.95" x2="177.17" y2="118.60"/> <!-- X_fw=112 -->
+    <line x1="188.90" y1="18.95" x2="188.90" y2="118.60"/> <!-- X_fw=120 -->
+    <line x1="200.62" y1="18.95" x2="200.62" y2="118.60"/> <!-- X_fw=128 -->
+    <line x1="212.34" y1="18.95" x2="212.34" y2="118.60"/> <!-- X_fw=136 -->
+    <line x1="224.07" y1="18.95" x2="224.07" y2="118.60"/> <!-- X_fw=144 -->
+    <line x1="235.79" y1="18.95" x2="235.79" y2="118.60"/> <!-- X_fw=152 -->
+    <line x1="247.51" y1="18.95" x2="247.51" y2="118.60"/> <!-- X_fw=160 -->
+    <line x1="259.24" y1="18.95" x2="259.24" y2="118.60"/> <!-- X_fw=168 -->
+    <line x1="270.96" y1="18.95" x2="270.96" y2="118.60"/> <!-- X_fw=176 -->
+    <line x1="282.68" y1="18.95" x2="282.68" y2="118.60"/> <!-- X_fw=184 -->
+    <line x1="294.41" y1="18.95" x2="294.41" y2="118.60"/> <!-- X_fw=192 -->
+    <line x1="306.13" y1="18.95" x2="306.13" y2="118.60"/> <!-- X_fw=200 -->
+    <line x1="317.85" y1="18.95" x2="317.85" y2="118.60"/> <!-- X_fw=208 -->
+    <line x1="329.58" y1="18.95" x2="329.58" y2="118.60"/> <!-- X_fw=216 -->
+    <line x1="341.30" y1="18.95" x2="341.30" y2="118.60"/> <!-- X_fw=224 -->
+    <!-- Horizontal grid lines (constant Y_fw) -->
+    <line x1="13.05" y1="18.95" x2="341.30" y2="18.95" stroke="#333333" stroke-width="0.6" opacity="1.0"/> <!-- Y_fw=0 (X-axis) -->
+    <line x1="13.05" y1="30.67" x2="341.30" y2="30.67"/> <!-- Y_fw=8 -->
+    <line x1="13.05" y1="42.40" x2="341.30" y2="42.40"/> <!-- Y_fw=16 -->
+    <line x1="13.05" y1="54.12" x2="341.30" y2="54.12"/> <!-- Y_fw=24 -->
+    <line x1="13.05" y1="65.84" x2="341.30" y2="65.84"/> <!-- Y_fw=32 -->
+    <line x1="13.05" y1="77.57" x2="341.30" y2="77.57"/> <!-- Y_fw=40 -->
+    <line x1="13.05" y1="89.29" x2="341.30" y2="89.29"/> <!-- Y_fw=48 -->
+    <line x1="13.05" y1="101.01" x2="341.30" y2="101.01"/> <!-- Y_fw=56 -->
+    <line x1="13.05" y1="112.74" x2="341.30" y2="112.74"/> <!-- Y_fw=64 -->
+    <!-- Origin marker (0,0) -->
+    <circle cx="13.05" cy="18.95" r="2" fill="#ff0000" opacity="1.0"/>
+  </g>
+
+  <!-- Outer rectangle: Complete keyboard (128.3mm height × 352.7mm width) -->
+  <rect x="0" y="0" width="352.7" height="128.3"
+        fill="none" stroke="#0066cc" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="176.35" y="4" font-family="Arial, sans-serif" font-size="4"
+        text-anchor="middle" fill="#0066cc">RPKeebs RPWK87 TKL - Keyboard 352.7×128.3mm</text>
+
+  <!-- Inner rectangle: PCB (117.6mm height × 342.4mm width) -->
+  <!-- Centered within keyboard: (352.7-342.4)/2 = 5.15mm offset X, (128.3-117.6)/2 = 5.35mm offset Y -->
+  <rect x="5.15" y="5.35" width="342.4" height="117.6"
+        fill="none" stroke="#009933" stroke-width="0.5"/>
+  <text x="60" y="4" font-family="Arial, sans-serif" font-size="4"
+        text-anchor="middle" fill="#009933">PCB 342.4×117.6mm</text>
+
+  <!-- Legend -->
+  <g id="legend" transform="translate(240, 45)">
+    <rect x="0" y="0" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="6" y="3.5" font-family="Arial, sans-serif" font-size="3" fill="#333">
+      Underglow LED (4×4mm)
+    </text>
+    <text x="0" y="8" font-family="Arial, sans-serif" font-size="2.5" fill="#666">
+      LED_00 to LED_23 (24 total)
+    </text>
+    <rect x="0" y="10" width="2" height="2" fill="#00ff00" stroke="#009900" stroke-width="0.2"/>
+    <text x="4" y="12.5" font-family="Arial, sans-serif" font-size="3" fill="#009900">
+      Key RGB LED (2×2mm)
+    </text>
+    <rect x="0" y="14" width="9" height="7" fill="#333333" stroke="#000000" stroke-width="0.3"/>
+    <text x="11" y="19.5" font-family="Arial, sans-serif" font-size="3" fill="#333">
+      USB Port (9×7mm)
+    </text>
+  </g>
+
+  <!-- Coordinate axes -->
+  <g id="axes" stroke="#999" stroke-width="0.3" fill="none">
+    <!-- X axis markers at by-8 grid positions (0, 32, 64, 96, 128, 160, 192, 224) -->
+    <line x1="13.05" y1="14" x2="13.05" y2="17" stroke="#999" stroke-width="0.3"/>
+    <text x="13.05" y="12" font-family="monospace" font-size="2" text-anchor="middle" fill="#666">0</text>
+
+    <line x1="59.94" y1="14" x2="59.94" y2="17" stroke="#999" stroke-width="0.3"/>
+    <text x="59.94" y="12" font-family="monospace" font-size="2" text-anchor="middle" fill="#666">32</text>
+
+    <line x1="106.84" y1="14" x2="106.84" y2="17" stroke="#999" stroke-width="0.3"/>
+    <text x="106.84" y="12" font-family="monospace" font-size="2" text-anchor="middle" fill="#666">64</text>
+
+    <line x1="153.73" y1="14" x2="153.73" y2="17" stroke="#999" stroke-width="0.3"/>
+    <text x="153.73" y="12" font-family="monospace" font-size="2" text-anchor="middle" fill="#666">96</text>
+
+    <line x1="200.62" y1="14" x2="200.62" y2="17" stroke="#999" stroke-width="0.3"/>
+    <text x="200.62" y="12" font-family="monospace" font-size="2" text-anchor="middle" fill="#666">128</text>
+
+    <line x1="247.51" y1="14" x2="247.51" y2="17" stroke="#999" stroke-width="0.3"/>
+    <text x="247.51" y="12" font-family="monospace" font-size="2" text-anchor="middle" fill="#666">160</text>
+
+    <line x1="294.41" y1="14" x2="294.41" y2="17" stroke="#999" stroke-width="0.3"/>
+    <text x="294.41" y="12" font-family="monospace" font-size="2" text-anchor="middle" fill="#666">192</text>
+
+    <line x1="341.30" y1="14" x2="341.30" y2="17" stroke="#999" stroke-width="0.3"/>
+    <text x="341.30" y="12" font-family="monospace" font-size="2" text-anchor="middle" fill="#666">224</text>
+
+    <!-- Y axis markers at increments of 16 (0, 16, 32, 48, 64) -->
+    <line x1="8" y1="18.95" x2="11" y2="18.95" stroke="#999" stroke-width="0.3"/>
+    <text x="4" y="19.95" font-family="monospace" font-size="2" text-anchor="end" fill="#666">0</text>
+
+    <line x1="8" y1="42.40" x2="11" y2="42.40" stroke="#999" stroke-width="0.3"/>
+    <text x="4" y="43.40" font-family="monospace" font-size="2" text-anchor="end" fill="#666">16</text>
+
+    <line x1="8" y1="65.84" x2="11" y2="65.84" stroke="#999" stroke-width="0.3"/>
+    <text x="4" y="66.84" font-family="monospace" font-size="2" text-anchor="end" fill="#666">32</text>
+
+    <line x1="8" y1="89.29" x2="11" y2="89.29" stroke="#999" stroke-width="0.3"/>
+    <text x="4" y="90.29" font-family="monospace" font-size="2" text-anchor="end" fill="#666">48</text>
+
+    <line x1="8" y1="112.74" x2="11" y2="112.74" stroke="#999" stroke-width="0.3"/>
+    <text x="4" y="113.74" font-family="monospace" font-size="2" text-anchor="end" fill="#666">64</text>
+  </g>
+
+  <!-- Underglow LEDs (87-110, labeled as LED_00 to LED_23) -->
+  <!-- MEASURED LAYOUT from physical PCB -->
+  <!-- Rows measured from PCB bottom: 18.65, 37.55, 58.95, 79.55, 100.25mm -->
+  <!-- LED_00 at Pause key (top left in image), chain goes down left edge -->
+  <!-- LED_04 at bottom left corner, continues across bottom -->
+  <!-- LED_23 near USB (top edge, ~66mm from left) -->
+
+  <g id="underglow-leds">
+
+    <!-- LEFT EDGE: 5 LEDs (top to bottom, starting at Pause key) -->
+    <!-- LED 87 (LED_00): Row 5 - 100.25mm from PCB bottom, X aligned with LED_04 -->
+    <rect x="331.05" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="341.05" y="23.70" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="end" fill="#333">00</text>
+    <text x="333.05" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(219,3)</text>
+
+    <!-- LED 88 (LED_01): Row 4 - 79.55mm from PCB bottom, X aligned with LED_04 -->
+    <rect x="331.05" y="41.40" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="341.05" y="44.40" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="end" fill="#333">01</text>
+    <text x="333.05" y="50.90" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(219,17)</text>
+
+    <!-- LED 89 (LED_02): Row 3 - 58.95mm from PCB bottom, X aligned with LED_04 -->
+    <rect x="331.05" y="62.00" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="341.05" y="65.00" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="end" fill="#333">02</text>
+    <text x="333.05" y="71.50" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(219,31)</text>
+
+    <!-- LED 90 (LED_03): Row 2 - 37.55mm from PCB bottom, X aligned with LED_04 -->
+    <rect x="331.05" y="83.40" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="341.05" y="86.40" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="end" fill="#333">03</text>
+    <text x="333.05" y="92.90" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(219,45)</text>
+
+    <!-- LED 91 (LED_04): Row 1 - 18.65mm from PCB bottom, 14.5mm from PCB left - Bottom left corner -->
+    <rect x="331.05" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="333.05" y="110.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">04</text>
+    <text x="333.05" y="116.30" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(219,58)</text>
+
+    <!-- BOTTOM ROW: 8 LEDs (Row 1 - 18.65mm from PCB bottom) -->
+    <!-- LED 92 (LED_05): 50.5mm from PCB left edge -->
+    <rect x="295.05" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="297.05" y="110.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">05</text>
+    <text x="297.05" y="116.30" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(195,58)</text>
+
+    <!-- LED 93 (LED_06): 92mm from PCB left edge -->
+    <rect x="253.55" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="255.55" y="110.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">06</text>
+    <text x="255.55" y="116.30" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(167,58)</text>
+
+    <!-- LED 94 (LED_07): 131.5mm from PCB left edge -->
+    <rect x="214.05" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="216.05" y="110.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">07</text>
+    <text x="216.05" y="116.30" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(140,58)</text>
+
+    <!-- LED 95 (LED_08): 170mm from PCB left edge -->
+    <rect x="175.55" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="177.55" y="110.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">08</text>
+    <text x="177.55" y="116.30" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(113,58)</text>
+
+    <!-- LED 96 (LED_09): 208.5mm from PCB left edge -->
+    <rect x="137.05" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="139.05" y="110.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">09</text>
+    <text x="139.05" y="116.30" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(87,58)</text>
+
+    <!-- LED 97 (LED_10): 247mm from PCB left edge -->
+    <rect x="98.55" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="100.55" y="110.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">10</text>
+    <text x="100.55" y="116.30" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(61,58)</text>
+
+    <!-- LED 98 (LED_11): 285.5mm from PCB left edge -->
+    <rect x="60.05" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="62.05" y="110.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">11</text>
+    <text x="62.05" y="116.30" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(35,58)</text>
+
+    <!-- RIGHT EDGE: 5 LEDs (bottom to top, starting at bottom right corner) -->
+    <!-- LED 99 (LED_12): Row 1 - 18.65mm from PCB bottom, 322.5mm from PCB left -->
+    <rect x="23.05" y="102.30" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="17.05" y="104.80" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="start" fill="#333">12</text>
+    <text x="25.05" y="111.80" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(9,58)</text>
+
+    <!-- LED 100 (LED_13): Row 2 - 37.55mm from PCB bottom, X aligned with LED_12 -->
+    <rect x="23.05" y="83.40" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="17.05" y="85.90" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="start" fill="#333">13</text>
+    <text x="25.05" y="92.90" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(9,45)</text>
+
+    <!-- LED 101 (LED_14): Row 3 - 58.95mm from PCB bottom, X aligned with LED_12 -->
+    <rect x="23.05" y="62.00" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="17.05" y="64.50" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="start" fill="#333">14</text>
+    <text x="25.05" y="71.50" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(9,31)</text>
+
+    <!-- LED 102 (LED_15): Row 4 - 79.55mm from PCB bottom, X aligned with LED_12 -->
+    <rect x="23.05" y="41.40" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="17.05" y="43.90" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="start" fill="#333">15</text>
+    <text x="25.05" y="50.90" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(9,17)</text>
+
+    <!-- LED 103 (LED_16): Row 5 - 100.25mm from PCB bottom, X aligned with LED_12 -->
+    <rect x="23.05" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="17.05" y="23.20" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="start" fill="#333">16</text>
+    <text x="25.05" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(9,3)</text>
+
+    <!-- TOP ROW: 7 LEDs (Row 5 - 100.25mm from PCB bottom, mirroring bottom row X positions) -->
+    <!-- LED 104 (LED_17): X same as LED_11 (285.5mm) -->
+    <rect x="60.05" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="62.05" y="19.20" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">17</text>
+    <text x="62.05" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(35,3)</text>
+
+    <!-- LED 105 (LED_18): X same as LED_10 (247mm) -->
+    <rect x="98.55" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="100.55" y="19.20" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">18</text>
+    <text x="100.55" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(61,3)</text>
+
+    <!-- LED 106 (LED_19): X same as LED_09 (208.5mm) -->
+    <rect x="137.05" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="139.05" y="19.20" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">19</text>
+    <text x="139.05" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(87,3)</text>
+
+    <!-- LED 107 (LED_20): X same as LED_08 (170mm) -->
+    <rect x="175.55" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="177.55" y="19.20" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">20</text>
+    <text x="177.55" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(113,3)</text>
+
+    <!-- LED 108 (LED_21): X same as LED_07 (131.5mm) -->
+    <rect x="214.05" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="216.05" y="19.20" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">21</text>
+    <text x="216.05" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(140,3)</text>
+
+    <!-- LED 109 (LED_22): X same as LED_06 (92mm) -->
+    <rect x="253.55" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="255.55" y="19.20" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">22</text>
+    <text x="255.55" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(167,3)</text>
+
+    <!-- LED 110 (LED_23): X same as LED_05 (50.5mm) - Near USB -->
+    <rect x="295.05" y="20.70" width="4" height="4" fill="#ff3333" stroke="#990000" stroke-width="0.2"/>
+    <text x="297.05" y="19.20" font-family="monospace" font-size="3.5" font-weight="bold" text-anchor="middle" fill="#333">23</text>
+    <text x="297.05" y="30.20" font-family="monospace" font-size="2.5" text-anchor="middle" fill="#666">(195,3)</text>
+
+  </g>
+
+  <!-- Key RGB LEDs (all 87 keys) -->
+  <!-- TOP VIEW: X increases to the RIGHT, Y increases DOWN -->
+  <!-- CORRECTED SCALE: 1u = 19.05mm, so 13 firmware units = 1u -->
+  <!-- Scale = 1.4654mm per firmware unit -->
+  <!-- CORRECTED Y-COORDINATES: Row spacing adjusted for proper 1u gaps -->
+  <!-- Origin (0,0) at top-LEFT corner -->
+  <!-- Formula: SVG_X = 13.05 + X_fw * 1.4654, SVG_Y = 18.95 + Y_fw * 1.4654 -->
+  <g id="key-rgb-leds">
+    <!--  0: UP    @ (211, 55) --> <circle cx="322.25" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  1: RGHT  @ (224, 68) --> <circle cx="341.30" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  2: DOWN  @ (211, 68) --> <circle cx="322.25" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  3: LEFT  @ (198, 68) --> <circle cx="303.20" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  4: RCTL  @ (178, 68) --> <circle cx="273.89" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  5: FN    @ (162, 68) --> <circle cx="250.44" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  6: RGUI  @ (146, 68) --> <circle cx="227.00" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  7: RALT  @ (130, 68) --> <circle cx="203.55" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  8: SPC   @ ( 49, 68) --> <circle cx="84.85" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  9: LALT  @ ( 32, 68) --> <circle cx="59.94" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 10: LGUI  @ ( 16, 68) --> <circle cx="36.50" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 11: LCTL  @ (  0, 68) --> <circle cx="13.05" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 12: LSFT  @ (  0, 55) --> <circle cx="13.05" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 13: Z     @ ( 29, 55) --> <circle cx="55.55" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 14: X     @ ( 42, 55) --> <circle cx="74.60" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 15: C     @ ( 55, 55) --> <circle cx="93.65" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 16: V     @ ( 68, 55) --> <circle cx="112.70" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 17: B     @ ( 81, 55) --> <circle cx="131.75" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 18: N     @ ( 94, 55) --> <circle cx="150.80" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 19: M     @ (107, 55) --> <circle cx="169.85" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 20: ,     @ (120, 55) --> <circle cx="188.90" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 21: .     @ (133, 55) --> <circle cx="207.95" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 22: /     @ (146, 55) --> <circle cx="227.00" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 23: RSFT  @ (159, 55) --> <circle cx="246.05" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 24: ENTER @ (166, 42) --> <circle cx="256.31" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 25: '     @ (153, 42) --> <circle cx="237.26" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 26: ;     @ (140, 42) --> <circle cx="218.21" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 27: L     @ (127, 42) --> <circle cx="199.16" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 28: K     @ (114, 42) --> <circle cx="180.11" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 29: J     @ (101, 42) --> <circle cx="161.06" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 30: H     @ ( 88, 42) --> <circle cx="142.01" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 31: G     @ ( 75, 42) --> <circle cx="122.95" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 32: F     @ ( 62, 42) --> <circle cx="103.90" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 33: D     @ ( 49, 42) --> <circle cx="84.85" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 34: S     @ ( 36, 42) --> <circle cx="65.80" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 35: A     @ ( 23, 42) --> <circle cx="46.75" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 36: CAPS  @ (  0, 42) --> <circle cx="13.05" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 37: TAB   @ (  0, 29) --> <circle cx="13.05" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 38: Q     @ ( 19, 29) --> <circle cx="40.89" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 39: W     @ ( 32, 29) --> <circle cx="59.94" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 40: E     @ ( 45, 29) --> <circle cx="78.99" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 41: R     @ ( 58, 29) --> <circle cx="98.04" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 42: T     @ ( 71, 29) --> <circle cx="117.09" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 43: Y     @ ( 84, 29) --> <circle cx="136.14" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 44: U     @ ( 97, 29) --> <circle cx="155.19" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 45: I     @ (110, 29) --> <circle cx="174.24" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 46: O     @ (123, 29) --> <circle cx="193.29" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 47: P     @ (136, 29) --> <circle cx="212.34" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 48: [     @ (149, 29) --> <circle cx="231.39" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 49: ]     @ (162, 29) --> <circle cx="250.44" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 50: \     @ (175, 29) --> <circle cx="269.50" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 51: DEL   @ (198, 29) --> <circle cx="303.20" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 52: END   @ (211, 29) --> <circle cx="322.25" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 53: PGDN  @ (224, 29) --> <circle cx="341.30" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 54: PGUP  @ (224, 16) --> <circle cx="341.30" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 55: HOME  @ (211, 16) --> <circle cx="322.25" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 56: INS   @ (198, 16) --> <circle cx="303.20" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 57: BSPC  @ (169, 16) --> <circle cx="260.70" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 58: =     @ (156, 16) --> <circle cx="241.65" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 59: -     @ (143, 16) --> <circle cx="222.60" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 60: 0     @ (130, 16) --> <circle cx="203.55" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 61: 9     @ (117, 16) --> <circle cx="184.50" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 62: 8     @ (104, 16) --> <circle cx="165.45" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 63: 7     @ ( 91, 16) --> <circle cx="146.40" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 64: 6     @ ( 78, 16) --> <circle cx="127.35" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 65: 5     @ ( 65, 16) --> <circle cx="108.30" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 66: 4     @ ( 52, 16) --> <circle cx="89.25" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 67: 3     @ ( 39, 16) --> <circle cx="70.20" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 68: 2     @ ( 26, 16) --> <circle cx="51.15" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 69: 1     @ ( 13, 16) --> <circle cx="32.10" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 70: `     @ (  0, 16) --> <circle cx="13.05" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 71: ESC   @ (  0,  0) --> <circle cx="13.05" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 72: F1    @ ( 26,  0) --> <circle cx="51.15" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 73: F2    @ ( 39,  0) --> <circle cx="70.20" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 74: F3    @ ( 52,  0) --> <circle cx="89.25" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 75: F4    @ ( 65,  0) --> <circle cx="108.30" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 76: F5    @ ( 84,  0) --> <circle cx="136.14" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 77: F6    @ ( 97,  0) --> <circle cx="155.19" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 78: F7    @ (110,  0) --> <circle cx="174.24" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 79: F8    @ (123,  0) --> <circle cx="193.29" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 80: F9    @ (143,  0) --> <circle cx="222.60" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 81: F10   @ (156,  0) --> <circle cx="241.65" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 82: F11   @ (169,  0) --> <circle cx="260.70" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 83: F12   @ (182,  0) --> <circle cx="279.75" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 84: PSCR  @ (198,  0) --> <circle cx="303.20" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 85: SCLK  @ (211,  0) --> <circle cx="322.25" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 86: PAUS  @ (224,  0) --> <circle cx="341.30" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+  </g>
+
+
+
+  <!-- USB Port -->
+  <!-- Position: 66mm from physical right side of keyboard -->
+  <!-- Top view: USB at right side of image, 66mm from right edge -->
+  <!-- USB port is 9mm wide, 7mm high (reduced to avoid clipping frame) -->
+  <g id="usb-port">
+    <rect x="277.7" y="0" width="9" height="7" fill="#333333" stroke="#000000" stroke-width="0.5"/>
+    <text x="282.2" y="10" font-family="Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#333">USB-C</text>
+  </g>
+
+  <!-- Notes -->
+  <text x="176.35" y="108" font-family="Arial, sans-serif" font-size="3" text-anchor="middle" fill="#666">
+    View: Looking from top of PCB | LED chain order: 00→23 around perimeter
+  </text>
+
+  <text x="176.35" y="113" font-family="Arial, sans-serif" font-size="2.5" text-anchor="middle" fill="#999">
+    Generated from QMK firmware configuration | File: keyboards/rpkeebs/rpwk87/keyboard.c
+  </text>
+
+</svg>
