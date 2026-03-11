@@ -288,93 +288,93 @@
   <!-- Origin (0,0) at top-LEFT corner -->
   <!-- Formula: SVG_X = 13.05 + X_fw * 1.4654, SVG_Y = 18.95 + Y_fw * 1.4654 -->
   <g id="key-rgb-leds">
-    <!--  0: UP    @ (211, 55) --> <circle cx="322.25" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  1: RGHT  @ (224, 68) --> <circle cx="341.30" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  2: DOWN  @ (211, 68) --> <circle cx="322.25" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  3: LEFT  @ (198, 68) --> <circle cx="303.20" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  4: RCTL  @ (178, 68) --> <circle cx="273.89" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  5: FN    @ (162, 68) --> <circle cx="250.44" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  6: RGUI  @ (146, 68) --> <circle cx="227.00" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  7: RALT  @ (130, 68) --> <circle cx="203.55" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  8: SPC   @ ( 49, 68) --> <circle cx="84.85" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!--  9: LALT  @ ( 32, 68) --> <circle cx="59.94" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 10: LGUI  @ ( 16, 68) --> <circle cx="36.50" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 11: LCTL  @ (  0, 68) --> <circle cx="13.05" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 12: LSFT  @ (  0, 55) --> <circle cx="13.05" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 13: Z     @ ( 29, 55) --> <circle cx="55.55" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 14: X     @ ( 42, 55) --> <circle cx="74.60" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 15: C     @ ( 55, 55) --> <circle cx="93.65" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 16: V     @ ( 68, 55) --> <circle cx="112.70" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 17: B     @ ( 81, 55) --> <circle cx="131.75" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 18: N     @ ( 94, 55) --> <circle cx="150.80" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 19: M     @ (107, 55) --> <circle cx="169.85" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 20: ,     @ (120, 55) --> <circle cx="188.90" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 21: .     @ (133, 55) --> <circle cx="207.95" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 22: /     @ (146, 55) --> <circle cx="227.00" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 23: RSFT  @ (159, 55) --> <circle cx="246.05" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 24: ENTER @ (166, 42) --> <circle cx="256.31" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 25: '     @ (153, 42) --> <circle cx="237.26" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 26: ;     @ (140, 42) --> <circle cx="218.21" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 27: L     @ (127, 42) --> <circle cx="199.16" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 28: K     @ (114, 42) --> <circle cx="180.11" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 29: J     @ (101, 42) --> <circle cx="161.06" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 30: H     @ ( 88, 42) --> <circle cx="142.01" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 31: G     @ ( 75, 42) --> <circle cx="122.95" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 32: F     @ ( 62, 42) --> <circle cx="103.90" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 33: D     @ ( 49, 42) --> <circle cx="84.85" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 34: S     @ ( 36, 42) --> <circle cx="65.80" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 35: A     @ ( 23, 42) --> <circle cx="46.75" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 36: CAPS  @ (  0, 42) --> <circle cx="13.05" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 37: TAB   @ (  0, 29) --> <circle cx="13.05" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 38: Q     @ ( 19, 29) --> <circle cx="40.89" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 39: W     @ ( 32, 29) --> <circle cx="59.94" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 40: E     @ ( 45, 29) --> <circle cx="78.99" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 41: R     @ ( 58, 29) --> <circle cx="98.04" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 42: T     @ ( 71, 29) --> <circle cx="117.09" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 43: Y     @ ( 84, 29) --> <circle cx="136.14" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 44: U     @ ( 97, 29) --> <circle cx="155.19" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 45: I     @ (110, 29) --> <circle cx="174.24" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 46: O     @ (123, 29) --> <circle cx="193.29" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 47: P     @ (136, 29) --> <circle cx="212.34" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 48: [     @ (149, 29) --> <circle cx="231.39" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 49: ]     @ (162, 29) --> <circle cx="250.44" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 50: \     @ (175, 29) --> <circle cx="269.50" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 51: DEL   @ (198, 29) --> <circle cx="303.20" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 52: END   @ (211, 29) --> <circle cx="322.25" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 53: PGDN  @ (224, 29) --> <circle cx="341.30" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 54: PGUP  @ (224, 16) --> <circle cx="341.30" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 55: HOME  @ (211, 16) --> <circle cx="322.25" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 56: INS   @ (198, 16) --> <circle cx="303.20" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 57: BSPC  @ (169, 16) --> <circle cx="260.70" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 58: =     @ (156, 16) --> <circle cx="241.65" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 59: -     @ (143, 16) --> <circle cx="222.60" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 60: 0     @ (130, 16) --> <circle cx="203.55" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 61: 9     @ (117, 16) --> <circle cx="184.50" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 62: 8     @ (104, 16) --> <circle cx="165.45" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 63: 7     @ ( 91, 16) --> <circle cx="146.40" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 64: 6     @ ( 78, 16) --> <circle cx="127.35" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 65: 5     @ ( 65, 16) --> <circle cx="108.30" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 66: 4     @ ( 52, 16) --> <circle cx="89.25" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 67: 3     @ ( 39, 16) --> <circle cx="70.20" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 68: 2     @ ( 26, 16) --> <circle cx="51.15" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 69: 1     @ ( 13, 16) --> <circle cx="32.10" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 70: `     @ (  0, 16) --> <circle cx="13.05" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 71: ESC   @ (  0,  0) --> <circle cx="13.05" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 72: F1    @ ( 26,  0) --> <circle cx="51.15" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 73: F2    @ ( 39,  0) --> <circle cx="70.20" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 74: F3    @ ( 52,  0) --> <circle cx="89.25" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 75: F4    @ ( 65,  0) --> <circle cx="108.30" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 76: F5    @ ( 84,  0) --> <circle cx="136.14" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 77: F6    @ ( 97,  0) --> <circle cx="155.19" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 78: F7    @ (110,  0) --> <circle cx="174.24" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 79: F8    @ (123,  0) --> <circle cx="193.29" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 80: F9    @ (143,  0) --> <circle cx="222.60" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 81: F10   @ (156,  0) --> <circle cx="241.65" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 82: F11   @ (169,  0) --> <circle cx="260.70" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 83: F12   @ (182,  0) --> <circle cx="279.75" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 84: PSCR  @ (198,  0) --> <circle cx="303.20" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 85: SCLK  @ (211,  0) --> <circle cx="322.25" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
-    <!-- 86: PAUS  @ (224,  0) --> <circle cx="341.30" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  0: UP    @ (211, 55) --> <circle cx="331.04" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  1: RGHT  @ (224, 68) --> <circle cx="350.09" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  2: DOWN  @ (211, 68) --> <circle cx="331.04" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  3: LEFT  @ (198, 68) --> <circle cx="311.99" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  4: RCTL  @ (178, 68) --> <circle cx="285.61" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  5: FN    @ (162, 68) --> <circle cx="262.17" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  6: RGUI  @ (146, 68) --> <circle cx="238.72" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  7: RALT  @ (130, 68) --> <circle cx="215.28" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  8: SPC   @ ( 49, 68) --> <circle cx="144.94" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!--  9: LALT  @ ( 32, 68) --> <circle cx="71.67" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 10: LGUI  @ ( 16, 68) --> <circle cx="48.22" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 11: LCTL  @ (  0, 68) --> <circle cx="24.77" cy="118.60" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 12: LSFT  @ (  0, 55) --> <circle cx="35.03" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 13: Z     @ ( 29, 55) --> <circle cx="64.34" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 14: X     @ ( 42, 55) --> <circle cx="83.39" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 15: C     @ ( 55, 55) --> <circle cx="102.44" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 16: V     @ ( 68, 55) --> <circle cx="121.49" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 17: B     @ ( 81, 55) --> <circle cx="140.54" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 18: N     @ ( 94, 55) --> <circle cx="159.59" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 19: M     @ (107, 55) --> <circle cx="178.64" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 20: ,     @ (120, 55) --> <circle cx="197.69" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 21: .     @ (133, 55) --> <circle cx="216.74" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 22: /     @ (146, 55) --> <circle cx="235.79" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 23: RSFT  @ (159, 55) --> <circle cx="272.43" cy="99.55" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 24: ENTER @ (166, 42) --> <circle cx="278.29" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 25: '     @ (153, 42) --> <circle cx="246.05" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 26: ;     @ (140, 42) --> <circle cx="227.00" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 27: L     @ (127, 42) --> <circle cx="207.95" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 28: K     @ (114, 42) --> <circle cx="188.90" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 29: J     @ (101, 42) --> <circle cx="169.85" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 30: H     @ ( 88, 42) --> <circle cx="150.80" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 31: G     @ ( 75, 42) --> <circle cx="131.75" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 32: F     @ ( 62, 42) --> <circle cx="112.70" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 33: D     @ ( 49, 42) --> <circle cx="93.65" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 34: S     @ ( 36, 42) --> <circle cx="74.60" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 35: A     @ ( 23, 42) --> <circle cx="55.55" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 36: CAPS  @ (  0, 42) --> <circle cx="20.38" cy="80.50" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 37: TAB   @ (  0, 29) --> <circle cx="27.70" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 38: Q     @ ( 19, 29) --> <circle cx="49.69" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 39: W     @ ( 32, 29) --> <circle cx="68.74" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 40: E     @ ( 45, 29) --> <circle cx="87.79" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 41: R     @ ( 58, 29) --> <circle cx="106.84" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 42: T     @ ( 71, 29) --> <circle cx="125.89" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 43: Y     @ ( 84, 29) --> <circle cx="144.94" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 44: U     @ ( 97, 29) --> <circle cx="163.99" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 45: I     @ (110, 29) --> <circle cx="183.04" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 46: O     @ (123, 29) --> <circle cx="202.09" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 47: P     @ (136, 29) --> <circle cx="221.14" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 48: [     @ (149, 29) --> <circle cx="240.19" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 49: ]     @ (162, 29) --> <circle cx="259.24" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 50: \     @ (175, 29) --> <circle cx="284.15" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 51: DEL   @ (198, 29) --> <circle cx="311.99" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 52: END   @ (211, 29) --> <circle cx="331.04" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 53: PGDN  @ (224, 29) --> <circle cx="350.09" cy="61.45" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 54: PGUP  @ (224, 16) --> <circle cx="350.09" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 55: HOME  @ (211, 16) --> <circle cx="331.04" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 56: INS   @ (198, 16) --> <circle cx="311.99" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 57: BSPC  @ (169, 16) --> <circle cx="279.75" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 58: =     @ (156, 16) --> <circle cx="250.44" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 59: -     @ (143, 16) --> <circle cx="231.39" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 60: 0     @ (130, 16) --> <circle cx="212.34" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 61: 9     @ (117, 16) --> <circle cx="193.29" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 62: 8     @ (104, 16) --> <circle cx="174.24" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 63: 7     @ ( 91, 16) --> <circle cx="155.19" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 64: 6     @ ( 78, 16) --> <circle cx="136.14" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 65: 5     @ ( 65, 16) --> <circle cx="117.09" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 66: 4     @ ( 52, 16) --> <circle cx="98.04" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 67: 3     @ ( 39, 16) --> <circle cx="78.99" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 68: 2     @ ( 26, 16) --> <circle cx="59.94" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 69: 1     @ ( 13, 16) --> <circle cx="40.89" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 70: `     @ (  0, 16) --> <circle cx="21.84" cy="42.40" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 71: ESC   @ (  0,  0) --> <circle cx="21.84" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 72: F1    @ ( 26,  0) --> <circle cx="59.94" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 73: F2    @ ( 39,  0) --> <circle cx="78.99" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 74: F3    @ ( 52,  0) --> <circle cx="98.04" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 75: F4    @ ( 65,  0) --> <circle cx="117.09" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 76: F5    @ ( 84,  0) --> <circle cx="144.94" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 77: F6    @ ( 97,  0) --> <circle cx="163.99" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 78: F7    @ (110,  0) --> <circle cx="183.04" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 79: F8    @ (123,  0) --> <circle cx="202.09" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 80: F9    @ (143,  0) --> <circle cx="231.39" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 81: F10   @ (156,  0) --> <circle cx="250.44" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 82: F11   @ (169,  0) --> <circle cx="269.50" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 83: F12   @ (182,  0) --> <circle cx="288.55" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 84: PSCR  @ (198,  0) --> <circle cx="311.99" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 85: SCLK  @ (211,  0) --> <circle cx="331.04" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
+    <!-- 86: PAUS  @ (224,  0) --> <circle cx="350.09" cy="18.95" r="1" fill="#00ff00" opacity="0.7"/>
   </g>
 
 
