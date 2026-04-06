@@ -1,8 +1,8 @@
-# rpkeebs RPWK87
+# rpkeebs RPWK21
 
 - [More information on Printables](https://www.printables.com/model/1612022-rpkeebs-wk78-another-janky-keyboard-project-based)
-- [Brutalist housing 5 degree incline](https://www.tinkercad.com/things/j2OqCod8cQN-rpwk87-brutalist-housing-5-deg-incline)
-- [Brutalist housing 3.5 degree incline](https://www.tinkercad.com/things/h4vcry9e0PI-rpwk87-brutalist-housing-35-deg-incline)
+- [Brutalist housing 5 degree incline](https://www.tinkercad.com/things/j2OqCod8cQN-rpwk21-brutalist-housing-5-deg-incline)
+- [Brutalist housing 3.5 degree incline](https://www.tinkercad.com/things/h4vcry9e0PI-rpwk21-brutalist-housing-35-deg-incline)
 
 ## Getting started
 
@@ -12,20 +12,20 @@
 
 ```shell
 git clone https://github.com/vial-kb/vial-qmk.git MyKBDProject
-git clone https://github.com/rmpel/qmk-vial-keyboard-wk87.git MyKBDProject/keyboards/rpkeebs/rpwk87
+git clone https://github.com/rmpel/qmk-vial-keyboard-wk21.git MyKBDProject/keyboards/rpkeebs/rpwk21
 ```
 
 ## This is for an existing PCB;
 
 - https://nl.aliexpress.com/item/1005008447490532.html
-- TKL R PCB WK 1.2MM
-- TX SUO TKL R PCB 1.2MM WK WKL hotswap PCB
+- Numpad PCB WK 1.2MM
+- TX SUO Numpad PCB 1.2MM WK hotswap PCB
 
-## A custom QMK firmware for the SUO 87R BT RGB LDN WK87 keyboard, featuring:
+## A custom QMK firmware for the SUO 21-key Numpad WK21 keyboard, featuring:
 
 - **MCU**: STM32F411CEU6
-- **Layout**: 87-key TKL (TenKeyLess)
-- **Matrix**: 12 rows × 8 columns (columns via 74HC595 shift register)
+- **Layout**: 21-key Numpad
+- **Matrix**: 6 rows × 4 columns (direct GPIO, no shift register)
 - **Features**: Per-key RGB + underglow (WS2812), Vial support
 
 ## How to program?
@@ -34,7 +34,7 @@ git clone https://github.com/rmpel/qmk-vial-keyboard-wk87.git MyKBDProject/keybo
 - I found the VDD line connected to a chip left of the MCU and the Boot0 line connected to a pull-down resistor. You can short this with tweezers or a paperclip; I soldered wires.
 - If you program my firmware, you only need this once! You can powerup with ESC held down to do the same from then on.
 - Then you need to unlock the flash memory; `dfu-util -a 0 -s :unprotect:force`
-- Then you can build and program this QMK/VIAL firmware; `qmk flash -kb rpkeebs/rpwk87 -km vial`
+- Then you can build and program this QMK/VIAL firmware; `qmk flash -kb rpkeebs/rpwk21 -km vial`
 
 # WARNING
 
@@ -62,19 +62,14 @@ git clone https://github.com/rmpel/qmk-vial-keyboard-wk87.git MyKBDProject/keybo
 - USB 2.0 Full Speed
 
 ### Matrix Configuration
-- **14 rows** (direct GPIO pins)
-- **8 columns** (via 74HC595 shift register)
-- **Diode direction**: COL2ROW
-
-### Shift Register (74HC595)
-- 1 chip providing 8 column outputs
-- Requires 3 control pins: DATA, CLOCK, LATCH
-- Optional: OE (Output Enable) pin
+- **6 rows** (direct GPIO pins)
+- **4 columns** (direct GPIO pins)
+- **Diode direction**: ROW2COL
 
 ### RGB LEDs (WS2812)
-- 87 per-key LEDs
-- 24 Additional underglow LEDs (count TBD)
-- 2 additional status LEDs
+- 21 per-key LEDs
+- 12 underglow LEDs
+- 1 status LED (under NumLock key)
 
 ---
 
@@ -106,9 +101,9 @@ If you improve this firmware or discover the correct pin mappings, please consid
 
 ## Acknowledgments
 
-- Shift register code adapted from miiiw/blackio83 by ArthurCyy
 - QMK Firmware team for the amazing framework
 - Vial team for the GUI configuration tool
+- Claude AI for extensive assistance with firmware configuration
 
 ---
 

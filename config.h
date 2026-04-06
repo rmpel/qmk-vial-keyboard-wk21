@@ -18,49 +18,21 @@
 
 /*
  * ===========================================================================
- * SHIFT REGISTER CONFIGURATION (74HC595)
- * ===========================================================================
- * The keyboard uses a 74HC595 shift register to expand column pins.
- * This allows controlling 8 columns using only 3 GPIO pins.
- *
- * TODO: Discover these pins by tracing PCB or testing
- * Typical pins to check: A0-A15, B0-B15, C13-C15
- */
-
-/* Number of 74HC595 chips daisy-chained (1 chip = 8 outputs) */
-#define SHR_SERIES_NUM 1
-
-/* Shift register control pins - DISCOVERED */
-#define SHR_CLOCK_PIN  A9   // 74HC595 pin 11 (SRCLK) → STM32 PA9
-#define SHR_DATA_PIN   A8   // 74HC595 pin 14 (SER) → STM32 PA8
-#define SHR_LATCH_PIN  C14  // 74HC595 pin 12 (RCLK) → STM32 PC14
-
-/* Output Enable pin - tied to GND on this PCB (always enabled) */
-// #define SHR_OE_PIN  - OE is hardwired to GND, no MCU control needed
-
-/*
- * ===========================================================================
  * RGB MATRIX CONFIGURATION (WS2812)
  * ===========================================================================
- * The keyboard has addressable RGB LEDs for both per-key lighting and underglow.
- * Total: 87 per-key LEDs + underglow LEDs (count TBD)
- *
- * TODO: Verify WS2812 data pin by tracing from LED chain
+ * The keyboard has addressable RGB LEDs for per-key lighting, underglow, and status.
+ * Total: 21 per-key LEDs + 12 underglow LEDs + 1 status LED = 34 total
  */
 
 /* WS2812 Timing Configuration */
 #define WS2812_BYTE_ORDER WS2812_BYTE_ORDER_GRB  // Color order for WS2812B
 #define WS2812_TRST_US 200  // Reset time in microseconds
 
-/* Using BITBANG driver since PB8 is not a TIM1-capable pin */
-/* LED chain: Up Arrow → Right Arrow → Down Arrow → ... → Pause → LED0 (underglow) → LED1... */
-/* No PWM configuration needed for bitbang driver */
+/* RGB Matrix Layout Configuration */
+#define RGB_MATRIX_LED_COUNT 34  // 21 per-key + 12 underglow + 1 status
 
-/*
- * RGB Matrix Layout Configuration
- * TODO: Map physical LED positions to matrix positions
- * This will require identifying which LED corresponds to which key
- */
+/* Status LED (chain position 33, under NumLock) */
+#define WK21_STATUS_LED_INDEX 33
 
 /* Enable RGB Matrix Effects */
 #define ENABLE_RGB_MATRIX_ALPHAS_MODS
@@ -85,18 +57,6 @@
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 #define ENABLE_RGB_MATRIX_TYPING_HEATMAP
-
-/* RGB Matrix Limits */
-#define RGB_MATRIX_LED_COUNT 113  // 87 per-key + 24 underglow + 2 status LEDs
-
-/* Status LEDs (face upward) */
-#define RGB_MATRIX_CAPS_LOCK_INDEX 111   // LED for Caps Lock indicator
-#define RGB_MATRIX_LAYER_INDEX 112        // LED for Layer indicator
-// Disable underglow by splitting them off from the main.
-// #define RGB_MATRIX_SPLIT { 87, 26 }
-
-/* Scanning delay in microseconds to prevent aliasing */
-#define WK87_SCAN_DELAY 1
 
 /*
  * ===========================================================================
@@ -123,17 +83,9 @@
  * OTHER CONFIGURATIONS
  * ===========================================================================
  */
- /*
-    Without this, status led 1 is caps lock (red = on), led 2 is layer (off = default layer, blue = layer 1, green = layer 2, yellow = layer 3). Colors conficured in keyboard.c.
-    With this, status led 1 indidates layer 0 (Mac mode), white for selection, blue for FN (the-layer+1) and led 2 is caps lock (red = on). For windows, it's the opposite; led 1 is the caps lock indicator and led 2 is the layer indicator.
- */
-// #define WK87_STATUS_VARIANT
-/* Brightness level for status LEDs (0-255), this controls a single color channel to combine into the colors stated above, is used for layer status */
-#define WK87_LAYER_STATUS_BRIGHTNESS_LEVEL 80
-/* Brightness level for status LEDs (0-255), this controls all three channels for the Mac/Win indication */
-#define WK87_MODE_STATUS_BRIGHTNESS_LEVEL 80
-#define WK87_MODE_STATUS_DURATION 5000
-#define WK87_MODE_STATUS_FADE_DURATION 2000
 
-/* Global RGB timeout */
+/* Brightness level for status LED (0-255) */
+#define WK21_STATUS_LED_BRIGHTNESS 80
+
+/* Global RGB timeout (10 minutes) */
 #define RGB_MATRIX_TIMEOUT 600000
