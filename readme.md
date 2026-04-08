@@ -1,8 +1,7 @@
 # rpkeebs RPWK21
 
-- [More information on Printables](https://www.printables.com/model/1612022-rpkeebs-wk78-another-janky-keyboard-project-based)
-- [Brutalist housing 5 degree incline](https://www.tinkercad.com/things/j2OqCod8cQN-rpwk21-brutalist-housing-5-deg-incline)
-- [Brutalist housing 3.5 degree incline](https://www.tinkercad.com/things/h4vcry9e0PI-rpwk21-brutalist-housing-35-deg-incline)
+- [More information on Printables](https://www.printables.com/model/1676148-rpkeebs-wk21-a-numpad-for-the-rpwk87-project)
+- [Brutalist Numpad housing 5 degree incline](https://www.tinkercad.com/things/3jfW5QKoDV1-rpwk21-brutalist-housing-5-deg-incline)
 
 ## Getting started
 
@@ -15,41 +14,32 @@ git clone https://github.com/vial-kb/vial-qmk.git MyKBDProject
 git clone https://github.com/rmpel/qmk-vial-keyboard-wk21.git MyKBDProject/keyboards/rpkeebs/rpwk21
 ```
 
-## This is for an existing PCB;
+## This is for a homebrew PCB, as a companion for this PCB;
 
 - https://nl.aliexpress.com/item/1005008447490532.html
-- Numpad PCB WK 1.2MM
-- TX SUO Numpad PCB 1.2MM WK hotswap PCB
+- TX SUO TKL PCB 1.2MM WK hotswap PCB
 
-## A custom QMK firmware for the SUO 21-key Numpad WK21 keyboard, featuring:
+## PCB Design;
+- [Remons Janky NumPad PCB](https://github.com/rmpel/rpkeebs-suo-tx-numpad)
 
-- **MCU**: STM32F411CEU6
+## A custom QMK firmware for the 21-key Numpad WK21 keyboard, featuring:
+
+- **MCU**: STM32F411CEU6 (probably overkill for a numpad, but it's what I had)
 - **Layout**: 21-key Numpad
 - **Matrix**: 6 rows × 4 columns (direct GPIO, no shift register)
 - **Features**: Per-key RGB + underglow (WS2812), Vial support
 
 ## How to program?
 
-- First to put the device in DFU mode, you need to short the Boot0 line to Logic High when plugging in.
-- I found the VDD line connected to a chip left of the MCU and the Boot0 line connected to a pull-down resistor. You can short this with tweezers or a paperclip; I soldered wires.
-- If you program my firmware, you only need this once! You can powerup with ESC held down to do the same from then on.
-- Then you need to unlock the flash memory; `dfu-util -a 0 -s :unprotect:force`
+- First to put the device in DFU mode, you need to push the Boot button while plugging in the USB cable.
 - Then you can build and program this QMK/VIAL firmware; `qmk flash -kb rpkeebs/rpwk21 -km vial`
-
-# WARNING
-
-- Flashing a custom firmware voids warranty!
-- Flashing can go wrong, you might brick your PCB!
-- Just because this worked for ME does not mean it will work for YOU.
-- OpenAI Claude or Google Gemini can help you! - Claude helped me.
+- After the first time, you can put the board in DFU mode by pressing M4 + M1 (FN + M1) while plugged in.
 
 # AI WARNING
 
 - Yes, this firmware ws configured with help of AI.
 - I told claude what I wanted, claude messed it up.
 - I told claude how to do better, claude fixed it.
-- I asked claude to guide me through measurements with a multimeter in continuity to find the matrix layout, then the LED layout
-- And still, claude F***ed up, but, after 8 long hours, THIS WORKS. The entire configuration is PERFECT.
 
 ---
 
@@ -83,6 +73,101 @@ git clone https://github.com/rmpel/qmk-vial-keyboard-wk21.git MyKBDProject/keybo
 - **QMK Discord**: https://discord.gg/qmk
 
 ---
+
+## Default keymap
+
+Layer 0 (Base Layer):
+
+```
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║  F13  ║║  F14  ║║  F15  ║║  FN   ║
+║       ║║       ║║       ║║ Layer1║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║ Num   ║║   /   ║║   *   ║║   -   ║
+║  Lock ║║       ║║       ║║       ║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║   7   ║║   8   ║║   9   ║║       ║
+║       ║║       ║║       ║║       ║
+╚═══════╝╚═══════╝╚═══════╝║   +   ║
+╔═══════╗╔═══════╗╔═══════╗║       ║
+║   4   ║║   5   ║║   6   ║║       ║
+║       ║║       ║║       ║║       ║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║   1   ║║   2   ║║   3   ║║   E   ║
+║       ║║       ║║       ║║   n   ║
+╚═══════╝╚═══════╝╚═══════╝║   t   ║
+╔════════════════╗╔═══════╗║   e   ║
+║       0        ║║   .   ║║   r   ║
+║                ║║       ║║       ║
+╚════════════════╝╚═══════╝╚═══════╝
+
+The dot can be a comma when you are on a mac depending on your keyboard language.
+```
+
+Layer 1 (Function Layer):
+
+```
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║ Boot  ║║   ▽   ║║ Toggle║║   ▽   ║
+║ Loadr ║║       ║║ Layer2║║       ║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║   ▽   ║║   ▽   ║║   ▽   ║║   ▽   ║
+║       ║║       ║║       ║║       ║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║ RGB   ║║ RGB   ║║ RGB   ║║   ▽   ║
+║ OnOff ║║ Mode+ ║║ Hue+  ║║       ║
+╚═══════╝╚═══════╝╚═══════╝║       ║
+╔═══════╗╔═══════╗╔═══════╗║       ║
+║ RGB   ║║ RGB   ║║ RGB + ║║       ║
+║ Val.+ ║║ Val.- ║║ Speed ║║       ║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║ RGB   ║║ RGB   ║║ RGB - ║║   ▽   ║
+║ Sat+  ║║ Sat-  ║║ Speed ║║       ║
+╚═══════╝╚═══════╝╚═══════╝║       ║
+╔════════════════╗╔═══════╗║       ║
+║        ▽       ║║   ▽   ║║       ║
+║                ║║       ║║       ║
+╚════════════════╝╚═══════╝╚═══════╝
+
+```
+
+Layer 2 (Mouse layer, use FN + M3 to toggle on/off):
+
+```
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║   ▽   ║║   ▽   ║║   ▽   ║║ MO(3) ║
+║       ║║       ║║       ║║       ║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║   ▽   ║║   ▽   ║║   ▽   ║║   ▽   ║
+║       ║║       ║║       ║║       ║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║ Mouse ║║ Mouse ║║ Mouse ║║   ▽   ║
+║ Btn 1 ║║   ↑   ║║ Btn 2 ║║       ║
+╚═══════╝╚═══════╝╚═══════╝║       ║
+╔═══════╗╔═══════╗╔═══════╗║       ║
+║ Mouse ║║ Mouse ║║ Mouse ║║       ║
+║   ←   ║║   ↓   ║║   →   ║║       ║
+╚═══════╝╚═══════╝╚═══════╝╚═══════╝
+╔═══════╗╔═══════╗╔═══════╗╔═══════╗
+║ Mouse ║║ Mouse ║║ Mouse ║║ Mouse ║
+║ Wh.Up ║║ Wh.Dn ║║ Wh.Lf ║║ Wh.Rt ║
+╚═══════╝╚═══════╝╚═══════╝║       ║
+╔════════════════╗╔═══════╗║       ║
+║     Mouse      ║║   ▽   ║║       ║
+║     Btn 3      ║║       ║║       ║
+╚════════════════╝╚═══════╝╚═══════╝
+```
+
+Layer 3 is currently the same as Layer 1.
+
 
 ## License
 
